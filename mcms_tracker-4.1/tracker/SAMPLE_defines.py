@@ -5,17 +5,17 @@ import os
 #########################################################################################
 
 # location of the source code that is required to run
-source_code_folder = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0'
-slp_data_directory = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0/sample_inputs/slp/'
-var_data_directory = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0/sample_inputs/slp/'
-topo_file = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0/sample_inputs/topo/GISS_MCMS_Topography.nc'
+source_code_folder = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.1'
+slp_data_directory = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.1/sample_inputs/slp/'
+var_data_directory = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.1/sample_inputs/slp/'
+topo_file = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.1/sample_inputs/topo/GISS_MCMS_Topography.nc'
 model = 'E213F40oQ40'
 over_write_years = [7550, 7550]
 
 # location to which to save the outputs from the tracker
 # also this is the location from which the tracker will be run
 # NOTE: the tracker does not run from the source code location
-main_folder_location = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0/sample_outputs/out/'
+main_folder_location = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.1/sample_outputs/out/'
 
 # # location of the slp data to be copied into the data directory
 # SLP folder should cotain the data for slp in the format slp.2010.nc
