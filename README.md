@@ -37,7 +37,7 @@ This program runs on python 3.6, which is old. Some inconsistencies with newer p
 
 You can setup conda to run python on your machine.
 
-Then create a new conda environment with Python version 3.6, via ONE of the following methods (method A is recommmended)
+Then create a new conda environment with Python version 3.6, via ONE of the following methods (method A is recommmended)  
 A) Create it automatically with provided YAML file  
 > conda env create -f environment.yml
  
