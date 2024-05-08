@@ -590,8 +590,8 @@ def setup_att(defs,gdict,gcd,g2l,ij2grid,grid2ij,
      # NOTE only checked for regular grid!!
      multiplier = defs.earth_radius * defs.earth_radius * dlon
 
-     distance_lookup = -1*numpy.ones((jm,maxid),numpy.int64)
-     angle_lookup = -1*numpy.ones((jm,maxid),numpy.int64)
+     distance_lookup = -1*numpy.ones((jm,maxid),numpy.int)
+     angle_lookup = -1*numpy.ones((jm,maxid),numpy.int)
 
      # Apply a parabolic tropical penitally such that at ABS(30 lat) the
      # distance from the center is exaggerated such that a wavenumber

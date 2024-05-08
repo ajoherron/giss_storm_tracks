@@ -78,7 +78,12 @@ class Save_NetCDF:
         lon[:] = self.lons
 
         # Populate data
-        thedata[:] = self.z
+        ## this is a hack to deal with potential shape mismatch. the original line was "thedata[:] = self.z". edited 2024-05-01 by M.Elling
+        # thedata[:] = self.z
+        if len(self.z) == 12960:
+            thedata[:] =  self.z.reshape((90, 144))
+        else:
+            thedata[:] = self.z
 
         # Write to file
         rootgrp.close()

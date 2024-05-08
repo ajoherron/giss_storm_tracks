@@ -509,9 +509,9 @@ def main(defs_set,imports,years,out_path,centers_file,shared_path,slp_path,
     super_total_centers_cnt = [0]*nflags#*11 # make size of total flag count
 
     if save_plot:
-        flag_cnt = numpy.zeros((jm*im,nflags),dtype=float)
+        flag_cnt = numpy.zeros((jm*im,nflags),dtype=numpy.float)
         # to see touch concerns
-        touch_concerns =  numpy.zeros((jm*im),dtype=float)
+        touch_concerns =  numpy.zeros((jm*im),dtype=numpy.float)
 
     if track_stats:
         # insert quantity info:
@@ -529,8 +529,8 @@ def main(defs_set,imports,years,out_path,centers_file,shared_path,slp_path,
         # For frequency plots
         data_index = [len(stat_groups)]
         data_index.append(jm*im)
-        bucket_freq_sum = numpy.zeros(data_index,dtype=float)
-        bucket_freq_cnt = numpy.zeros(data_index,dtype=float)
+        bucket_freq_sum = numpy.zeros(data_index,dtype=numpy.float)
+        bucket_freq_cnt = numpy.zeros(data_index,dtype=numpy.float)
 
         big_bins = [x for x in range(len(stat_groups))]
 
@@ -538,7 +538,7 @@ def main(defs_set,imports,years,out_path,centers_file,shared_path,slp_path,
         bin_width = 0.1
         bins_left_edge = numpy.arange(0.0,5.0,bin_width)
         tmp = setup_bins(bins_left_edge)
-        CisG_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.int64),
+        CisG_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.integer),
                      tmp[0],tmp[1],tmp[2],tmp[3]]
         big_bins[0] = CisG_bins
 
@@ -546,7 +546,7 @@ def main(defs_set,imports,years,out_path,centers_file,shared_path,slp_path,
         bin_width = 0.1
         bins_left_edge = numpy.arange(0.0,2.0,bin_width)
         tmp = setup_bins(bins_left_edge)
-        StheC_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.int64),
+        StheC_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.integer),
                      tmp[0],tmp[1],tmp[2],tmp[3]]
         big_bins[1] = StheC_bins
 
@@ -554,7 +554,7 @@ def main(defs_set,imports,years,out_path,centers_file,shared_path,slp_path,
         bin_width = 0.1
         bins_left_edge = numpy.arange(0.0,2.0,bin_width)
         tmp = setup_bins(bins_left_edge)
-        CisB_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.int64),
+        CisB_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.integer),
                      tmp[0],tmp[1],tmp[2],tmp[3]]
         big_bins[2] = CisB_bins
 
@@ -562,7 +562,7 @@ def main(defs_set,imports,years,out_path,centers_file,shared_path,slp_path,
         bin_width = 0.1
         bins_left_edge = numpy.arange(0.0,5.0,bin_width)
         tmp = setup_bins(bins_left_edge)
-        Dscore_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.int64),
+        Dscore_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.integer),
                      tmp[0],tmp[1],tmp[2],tmp[3]]
         big_bins[3] = Dscore_bins
 
@@ -570,7 +570,7 @@ def main(defs_set,imports,years,out_path,centers_file,shared_path,slp_path,
         bin_width = 5.0#45.0
         bins_left_edge = numpy.arange(0.0,360.0,bin_width)
         tmp = setup_bins(bins_left_edge)
-        bearing_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.int64),
+        bearing_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.integer),
                      tmp[0],tmp[1],tmp[2],tmp[3]]
         big_bins[4] = bearing_bins
 
@@ -578,7 +578,7 @@ def main(defs_set,imports,years,out_path,centers_file,shared_path,slp_path,
         bin_width = 1.0
         bins_left_edge = numpy.arange(0.0,10.0,bin_width)
         tmp = setup_bins(bins_left_edge)
-        Ccount_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.int64),
+        Ccount_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.integer),
                      tmp[0],tmp[1],tmp[2],tmp[3]]
         big_bins[5] = Ccount_bins
 
@@ -586,7 +586,7 @@ def main(defs_set,imports,years,out_path,centers_file,shared_path,slp_path,
         bin_width = 0.1
         bins_left_edge = numpy.arange(0.0,5.0,bin_width)
         tmp = setup_bins(bins_left_edge)
-        Dscore_Used_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.int64),
+        Dscore_Used_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.integer),
                        tmp[0],tmp[1],tmp[2],tmp[3]]
         big_bins[6] = Dscore_Used_bins
 
@@ -594,7 +594,7 @@ def main(defs_set,imports,years,out_path,centers_file,shared_path,slp_path,
         bin_width = 0.1
         bins_left_edge = numpy.arange(0.0,5.0,bin_width)
         tmp = setup_bins(bins_left_edge)
-        Dscore_Unused_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.int64),
+        Dscore_Unused_bins = [numpy.zeros(len(bins_left_edge),dtype=numpy.integer),
                        tmp[0],tmp[1],tmp[2],tmp[3]]
         big_bins[7] = Dscore_Unused_bins
 
@@ -1026,7 +1026,7 @@ def main(defs_set,imports,years,out_path,centers_file,shared_path,slp_path,
             msg = plot_hist(plt,numpy,x,y,width,stat_file,pname,title,xlab)
             print ("\t\t"+msg)
 
-            bave = numpy.zeros(im*jm,dtype=float)
+            bave = numpy.zeros(im*jm,dtype=numpy.float)
             for i in range(im*jm): # loop over each grid
                 if bucket_freq_cnt[loopy,i] >= 1:
                     bave[i] = numpy.divide(bucket_freq_sum[loopy,i],bucket_freq_cnt[loopy,i])

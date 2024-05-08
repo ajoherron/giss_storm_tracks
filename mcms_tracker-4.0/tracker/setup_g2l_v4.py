@@ -7,6 +7,6 @@ from Cython.Build import cythonize
 
 setup(
   name = 'g2l_v4',
-  # ext_modules=[Extension("g2l_v4",["g2l_v4.pyx"]),],cmdclass={'build_ext': build_ext}
+  #ext_modules=[Extension("g2l_v4",["g2l_v4.pyx"]),],cmdclass={'build_ext': build_ext}
   ext_modules=cythonize([Extension("g2l_v4",["g2l_v4.pyx"]),]),
 )
