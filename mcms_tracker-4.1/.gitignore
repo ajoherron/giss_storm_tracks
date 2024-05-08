@@ -1,7 +1,7 @@
 # data files
 *.dat
 *.mat
-*.nc
+#*.nc
 *.nc4
 *.txt
 *.tar
