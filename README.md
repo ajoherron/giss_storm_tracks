@@ -1,6 +1,6 @@
 # MCMS TRACKER
 
-***Created by: Jeyavinoth Jeyaratnam***
+***Created by: Jeyavinoth Jeyaratnam (CUNY), Updated by Maxwell Elling (maxwellelling@gmail.com), Jeffrey Jonas (jeffjonas88@gmail.com) (NASA GISS)***
 
 ***Last Modified: February 5th, 2020***
 
