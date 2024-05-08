@@ -28,6 +28,7 @@ This code was tested on v3.6, because netcdftime is run on this version under th
 * MTE changed numpy.float to python built-in "float" and numpy.int to numpy.int64 in several scripts due to deprication, additional similar type changes made throughout scripts
 * MTE edited line 80-86 in save_netcdf_v4.py to catch an edge case where data shapes are mismatched (the trap just reshapes the data in model grid structure) original line is commented out. Note - this is a hacky solution so keep an eye on it to ensure there are no downstream impacts
 * MTE updated conda environment + added yaml file to ensure correct libraries are imported
+* MTE automated compile steps in shell script  
 * MTE updated readme to include discover directions
 
 ## Installation of necesssary libraries  
@@ -71,8 +72,9 @@ Then install the following libraries:
 * <p>pip install -U matplotlib==3.2<p> - this is necessary to import 'dedent' from matplotlib which was tossed in later versions 
 
 
-Then you have to run the following (make sure to cd into your tracker folder):  
+Then you have to run the following (make sure to cd into your tracker folder):   
 
+You may run the following commands manually or better, automatically with "compile.sh"  
 Load the GCC module
 * module load comp/gcc/13.1.0
 
