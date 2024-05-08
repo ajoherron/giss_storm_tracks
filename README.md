@@ -1,13 +1,11 @@
 # MCMS TRACKER
 
-***Created by: Jeyavinoth Jeyaratnam (CUNY), Updated by Maxwell Elling (maxwellelling@gmail.com), Jeffrey Jonas (jeffjonas88@gmail.com) (NASA GISS)***
+***Created by: Jeyavinoth Jeyaratnam (CUNY), Updated by: Maxwell Elling (maxwellelling@gmail.com), Jeffrey Jonas (jeffjonas88@gmail.com) (NASA GISS)***
 
-***Last Modified: February 5th, 2020***
+***Last Modified: May 8th, 2024***
 
 ***Branched off from Mike Bauer's MCMS Tracking Algorithm***
 
-***These instructions can also be found in mcms_tracker-4.0/tracker_readme.md***
- 
 This code is modified version of Mike Bauer's MCMS Tracking Algorithm using Python.
 
 The "tracker" folder contains the MCMS Cyclone Tracker. 
@@ -24,8 +22,10 @@ This code was tested on v3.6, because netcdftime is run on this version under th
 * cPickle was changed to pickle (should not be an issue)
 * hard coded in some imports, cuz of the way "exec" command works in python3
 * dictionaries in python2 are not ordered dicts, so the keys were sorted in python2 code and python3 code to compare consistently
-* tree\_travesal\_v4.py code had issues with the list being not ordered in python2, so I changed the python2 code to have an ordered dict for fair comparison of the python3 tracker 
-
+* tree\_travesal\_v4.py code had issues with the list being not ordered in python2, so I changed the python2 code to have an ordered dict for fair comparison of the python3 tracker  
+* Max E. edited line 707 in track_finder_v4.py to fix an oversight in the string replacement method. the old method would replaced all instances of "tracks" in the path. The new code does this only in the relevant filename 
+* Max E. changed numpy.float to python built-in "float" and numpy.int to numpy.int64 in several scripts due to deprication
+* Max E. edited line 80-86 in save_netcdf_v4.py to catch an edge case where data shapes are mismatched (the trap just reshapes the data in ModelE 2.X grid structure) original line is commented out
 
 ## Installation of necesssary libraries
 
@@ -133,6 +133,11 @@ SLP netcdf files should have the following variables: lat (degrees\_north), lon 
 
 In the netcdf the "calendar" type has to be set for the time variables. 
 The time calendar must be set as "365\_day" or "proleptic\_gregorian," depending on your data. 
+!!! Important !!!
+If your time axis is not in this format you can change it.  
+E.g. to change from noleap to standard do the following  
+* module load cdo
+* cdo setcalendar,standard $infile $outfile
 
 
 ***Internal Note:*** 
