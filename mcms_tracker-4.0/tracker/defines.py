@@ -5,17 +5,7 @@ import os
 #########################################################################################
 
 # location of the source code that is required to run
-source_code_folder = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0'
-slp_data_directory = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0/sample_inputs/slp/'
-var_data_directory = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0/sample_inputs/slp/'
-topo_file = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0/sample_inputs/topo/GISS_MCMS_Topography.nc'
-model = 'E213F40oQ40'
-over_write_years = [7550, 7550]
-
-# location to which to save the outputs from the tracker
-# also this is the location from which the tracker will be run
-# NOTE: the tracker does not run from the source code location
-main_folder_location = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0/sample_outputs/out/'
+source_code_folder = '/localdrive/drive10/mcms_tracker/'
 
 # # location of the slp data to be copied into the data directory
 # SLP folder should cotain the data for slp in the format slp.2010.nc
@@ -86,6 +76,18 @@ main_folder_location = '/discover/nobackup/melling/debug_stormtracks/mcms_tracke
 # model = 'newgfdl'
 # over_write_years = [2008, 2012]
 
+# slp_data_directory = '/localdrive/drive6/leo/converts/'
+# var_data_directory = '/localdrive/drive6/leo/converts/'
+# topo_file = '/localdrive/drive6/leo/convert_invariants.nc'
+# model = 'testleo'
+# over_write_years = [2008, 2012]
+
+slp_data_directory = '/localdrive/drive6/tamu/converts/'
+var_data_directory = '/localdrive/drive6/tamu/converts/'
+topo_file = '/localdrive/drive6/tamu/converts/invariants.nc'
+model = 'testtamu'
+over_write_years = [1950, 2050]
+
 # slp_data_directory = '/localdrive/drive6/gfdl/converts/'
 # var_data_directory = '/localdrive/drive6/gfdl/converts/'
 # topo_file = '/localdrive/drive6/gfdl/convert_invariants.nc'
@@ -137,6 +139,10 @@ main_folder_location = '/discover/nobackup/melling/debug_stormtracks/mcms_tracke
 # model = 'mdtfaero'
 # model = 'mdtfnaud'
 
+# location to which to save the outputs from the tracker
+# also this is the location from which the tracker will be run 
+# NOTE: the tracker does not run from the source code location
+main_folder_location = '/localdrive/drive10/mcms_tracker/RUNDIR/'
 
 # creating the links to other folder locations that are called by other python codes
 main_folder = os.path.join(main_folder_location, model) + '/'
