@@ -35,6 +35,7 @@ You can setup conda to run python on your machine.
 Then create a new conda environment with Python version 3.6, via ONE of the following methods  
 1) Create it automatically with provided YAML file  
 > conda env create -f environment.yml  
+
 This will create environment "stormtracks"  
 
 2) Create it manually with the following commands  
