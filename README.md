@@ -171,7 +171,8 @@ It should contain the following variables:
 Edit the defines.py file, to make sure that you point to the correct folders. 
 This file contains all the variables that need to be setup to run the MCMS tracker.
 
-***Setup defines.py***
+***Setup defines.py***  
+Note: You may reference "SAMPLE\_defines.py" as an example  
 
 * source\_code\_folder -> ‘/mnt/drive1/jj/MCMS/V1/tracker’ the main source code location for the tracker, this will be the folder in which you clone this repository into. 
 
