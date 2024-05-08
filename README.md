@@ -96,8 +96,8 @@ Note that in the current directory, these \*.so files already exist, just to sho
 
 netcdftime library requires 3.6, so conda will downgrade your version of python to 3.6
 
-In python3.6 right now, basemap has an issue that is not fixed, so you will have to edit line 5111 from <environment\_base\_folder>/lib/python3.6/site-packages/mpl\_toolkits/basemap/\_\_init\_\_.py file, where for example the envrionment\_base\_folder=/home/USER/anaconda3/envs/tracker
-
+In python3.6 right now, basemap has an issue that is not fixed, so you will have to edit line 5111 from <environment\_base\_folder>/lib/python3.6/site-packages/mpl\_toolkits/basemap/\_\_init\_\_.py file, where for example the envrionment\_base\_folder=/home/USER/anaconda3/envs/tracker  
+Find env base folder via > python -c "import sys; print(sys.prefix)"
 from:
 
   return list(map(\_addcyclic,arr[:-1]) + [\_addcyclic\_lon(arr[-1])])
