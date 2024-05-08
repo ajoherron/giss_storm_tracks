@@ -1,12 +1,12 @@
 # MCMS TRACKER
 
-***Created by: Jeyavinoth Jeyaratnam***
+***Created by: Jeyavinoth Jeyaratnam (CUNY), Updated by Maxwell Elling (maxwellelling@gmail.com), Jeffrey Jonas (jeffjonas88@gmail.com) (NASA GISS)***
 
 ***Last Modified: February 5th, 2020***
 
 ***Branched off from Mike Bauer's MCMS Tracking Algorithm***
 
-*** These instructions can also be found in mcms_tracker-4.0/tracker_readme.md ***
+***These instructions can also be found in mcms_tracker-4.0/tracker_readme.md***
  
 This code is modified version of Mike Bauer's MCMS Tracking Algorithm using Python.
 
