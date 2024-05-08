@@ -184,9 +184,9 @@ It should contain the following variables:
 
 ## Setting up the Tracker 
 
-Edit the defines.py file, to make sure that you point to the correct folders. 
+Edit the defines.py file (in main folder), to make sure that you point to the correct folders. 
 This file contains all the variables that need to be setup to run the MCMS tracker.
-Make sure you edit the defines.py file in the tracker/ folder
+Make sure you also edit the defines.py file in the tracker/ folder (you may use the same defines.py file)  
 
 ***Setup defines.py***
 
