@@ -1,5 +1,6 @@
 # import netcdftime # Jeyavinoth removed netcdftime
 import netCDF4 as NetCDF
+import sys
 #import netCDF3 as NetCDF
 import datetime
 import jj_calendar as jjCal
@@ -78,10 +79,17 @@ class Save_NetCDF:
         lon[:] = self.lons
 
         # Populate data
-        ## this is a hack to deal with potential shape mismatch. the original line was "thedata[:] = self.z". edited 2024-05-01 by M.Elling
+        ## this is a hack to deal with potential shape mismatch. the original line was "thedata[:] = self.z". edited 2024-05-01 by MTE
         # thedata[:] = self.z
-        if len(self.z) == 12960:
-            thedata[:] =  self.z.reshape((90, 144))
+        if len(self.z) == (thedata.shape[0]*thedata.shape[1]): # if len of self.z is multiple of thedata shape, reshape it for compatibility
+            try:
+                thedata[:] =  self.z.reshape((thedata.shape[0], thedata.shape[1]))
+                print(f"Note: needed to reshape self.z data (len {len(self.z)}) to thedata shape ({thedata.shape})")
+            except Exception as e:
+                print(f"!!! Shape mismatch issue. thedata shape is {thedata.shape}. See error below. Exiting... !!!")
+                print("An error occurred:", e)
+                sys.exit(0)
+
         else:
             thedata[:] = self.z
 

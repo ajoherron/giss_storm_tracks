@@ -24,21 +24,26 @@ This code was tested on v3.6, because netcdftime is run on this version under th
 * hard coded in some imports, cuz of the way "exec" command works in python3
 * dictionaries in python2 are not ordered dicts, so the keys were sorted in python2 code and python3 code to compare consistently
 * tree\_travesal\_v4.py code had issues with the list being not ordered in python2, so I changed the python2 code to have an ordered dict for fair comparison of the python3 tracker 
+* MTE edited line 707 in track_finder_v4.py to fix an oversight in the string replacement method. the old method would replaced all instances of "tracks" in the path. The new code does this only in the relevant filename
+* MTE changed numpy.float to python built-in "float" and numpy.int to numpy.int64 in several scripts due to deprication, additional similar type changes made throughout scripts
+* MTE edited line 80-86 in save_netcdf_v4.py to catch an edge case where data shapes are mismatched (the trap just reshapes the data in model grid structure) original line is commented out. Note - this is a hacky solution so keep an eye on it to ensure there are no downstream impacts
+* MTE updated conda environment + added yaml file to ensure correct libraries are imported
+* MTE updated readme to include discover directions
 
-
-## Installation of necesssary libraries
+## Installation of necesssary libraries  
+If you do not have anaconda installed already, you may refer to this link for Linux instructions https://clouds.eos.ubc.ca/~phil/docs/problem_solving/01-Orientation/01.05-Installing-Anaconda-on-Linux.html  
 Before setting up your conda environment, ensure you have not imported another discover python module via your .bashrc, .profile, or otherwise (in testing this interfered with the program)  
 This program runs on python 3.6, which is old. Some inconsistencies with newer python versions may crash the program
 
 You can setup conda to run python on your machine.
 
-Then create a new conda environment with Python version 3.6, via ONE of the following methods  
-1) Create it automatically with provided YAML file  
-> conda env create -f environment.yml  
-
+Then create a new conda environment with Python version 3.6, via ONE of the following methods (method A is recommmended)
+A) Create it automatically with provided YAML file  
+> conda env create -f environment.yml
+ 
 This will create environment "stormtracks"  
 
-2) Create it manually with the following commands  
+B) Create it manually with the following commands  
 
 * <p>conda create -n stormtracks python=3.6</p>
 
