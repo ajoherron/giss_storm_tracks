@@ -143,7 +143,8 @@ matplotlib.use('TKAgg')
 import matplotlib.pyplot as plt
 
 
-## Pre-Setup of Sea Level Pressure data files
+## Pre-Setup of Sea Level Pressure data files  
+### SLP and TOPO samples can be referenced from discover: /discover/nobackup/melling/stormtracks/sample_inputs  
 
 Convert all the SLP files into the appropriate 6 hourly slp.YEAR.nc files (where YEAR varies). This has to be done by the user, and the slp files should in the correct format for the tracker. 
 
