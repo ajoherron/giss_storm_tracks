@@ -32,7 +32,7 @@ This code was tested on v3.6, because netcdftime is run on this version under th
 * MTE updated readme to include discover directions
 
 ## Installation of necesssary libraries  
-If you do not have anaconda installed already, you may refer to this link for Linux instructions https://clouds.eos.ubc.ca/~phil/docs/problem_solving/01-Orientation/01.05-Installing-Anaconda-on-Linux.html  
+If you do not have anaconda installed already, you must import the discover anaconda module before running. If you would prefer to have a static installation, you may refer to this link for Linux instructions https://clouds.eos.ubc.ca/~phil/docs/problem_solving/01-Orientation/01.05-Installing-Anaconda-on-Linux.html  
 Before setting up your conda environment, ensure you have not imported another discover python module via your .bashrc, .profile, or otherwise (in testing this interfered with the program)  
 This program runs on python 3.6, which is old. Some inconsistencies with newer python versions may crash the program
 
