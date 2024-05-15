@@ -41,6 +41,7 @@ Replace "anaconda/py3.9"  with correct module name (anaconda/py3.9 as of 2024.05
 * Note: if you do not have bash as your default shell you must switch to bash before loading module. Just execute "bash" to do this
   
 If you would prefer to have a static installation, you may refer to this link for Linux instructions https://clouds.eos.ubc.ca/~phil/docs/problem_solving/01-Orientation/01.05-Installing-Anaconda-on-Linux.html  
+
 Before setting up your conda environment, ensure you have not imported another discover python module via your .bashrc, .profile, or otherwise (in testing this interfered with the program)  
 This program runs on python 3.6, which is old. Some inconsistencies with newer python versions may crash the program
 
