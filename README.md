@@ -34,7 +34,7 @@ This code was tested on v3.6, because netcdftime is run on this version under th
 ## Installation of necesssary libraries  
 If you do not have anaconda installed already, you must import the discover anaconda module before running.  
 To do this...  
-> module load <anaconda module>
+> module load anaconda module
 
 Replace "anaconda module"  with correct module name (anaconda/py3.9 as of 2024.05.15)
 
