@@ -32,15 +32,23 @@ This code was tested on v3.6, because netcdftime is run on this version under th
 * MTE updated readme to include discover directions
 
 ## Installation of necesssary libraries  
-If you do not have anaconda installed already, you must import the discover anaconda module before running.  
+If you do not have anaconda installed already, you must install anaconda before running.   
 To do this...  
-> module load anaconda/py3.9
-
-Replace "anaconda/py3.9"  with correct module name (anaconda/py3.9 as of 2024.05.15)
-
-* Note: if you do not have bash as your default shell you must switch to bash before loading module. Just execute "bash" to do this
+1) Make temporary directory  
+> mkdir temp  
+> cd temp  
+2) Download anaconda bash script  
+> curl -O https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh  
+-note: replace 2021.05 with most recent version  
+3) Run installer  
+> bash Anaconda3-2021.05-Linux-x86_64.sh  
+-note: When the script asks to update your shell to auto-initialize conda, say “yes”  
+4) Test installation  
+> conda list  
+5) remove installer  
+> rm  Anaconda3-*-Linux-x86_64.sh  
   
-If you would prefer to have a static installation, you may refer to this link for Linux instructions https://clouds.eos.ubc.ca/~phil/docs/problem_solving/01-Orientation/01.05-Installing-Anaconda-on-Linux.html  
+You may refer to this link for further info https://clouds.eos.ubc.ca/~phil/docs/problem_solving/01-Orientation/01.05-Installing-Anaconda-on-Linux.html  
 
 Before setting up your conda environment, ensure you have not imported another discover python module via your .bashrc, .profile, or otherwise (in testing this interfered with the program)  
 This program runs on python 3.6, which is old. Some inconsistencies with newer python versions may crash the program
