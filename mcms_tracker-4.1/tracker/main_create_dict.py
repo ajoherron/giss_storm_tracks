@@ -24,8 +24,10 @@ def read_in_txt_file(base_dir, in_model, start_year, end_year):
   else:
     in_file = os.path.join(base_dir, 'out_%s_output_%04d_%04d.txt'%(in_model, start_year, end_year))
 
-  main_df = pd.read_csv(in_file, sep='\s+') 
-
+  # Updated from old script
+  # main_df = pd.read_csv(in_file, sep='\s+') 
+  main_df = pd.read_csv(in_file, sep=' ') 
+  
   # extracting only the certain columns I need from the main dataframe
   df = main_df.iloc[:, [0, 1, 2, 3, 5, 6, 8, 11, 14, 15]].copy()
 
@@ -98,18 +100,27 @@ for i_year in range(start_year, end_year+1):
     full_date = [date.toordinal(date(i_yy, i_mm, i_dd))+366.+i_hh/24. for i_yy, i_mm, i_dd, i_hh in zip(yy, mm, dd, hh)]
   
     # checking if the mode year is the current year, if not this track will be passed onto the next year or previous year accordingly
-    if (mode(yy).mode[0] != i_year):
+    # Updated from old script
+    # if (mode(yy).mode[0] != i_year):
+    if (mode(yy).mode != i_year):
       continue
 
     # appending to the temporary list of data variables, to be saved as mat files 
-    temp_yr_mode.append(mode(yy).mode[0])
+
+    # Updated from old script
+    # temp_yr_mode.append(mode(yy).mode[0])
+    temp_yr_mode.append(mode(yy).mode)
+    
     temp_fulldate.append(full_date)
     temp_date1.append(full_date[0])
     temp_fullyr.append(yy)
     temp_fullmon.append(mm) 
     temp_fullday.append(dd)
     temp_fullhr.append(hh)
-    temp_mon_mode.append(mode(mm).mode[0])
+
+    # Updated from old script
+    # temp_mon_mode.append(mode(mm).mode[0])
+    temp_mon_mode.append(mode(mm).mode)
 
     temp_uid.append(np.asarray(df.usi[usi_ind], dtype=float))
     temp_uidsingle.append(np.asarray(df.usi[usi_ind[0]], dtype=float))
