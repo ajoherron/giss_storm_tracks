@@ -41,17 +41,21 @@ over_write_years = [7550, 7550]
 
 (Already taken care of for this repository)
 
-# main_df = pd.read_csv(in_file, sep='\s+') Line 27
-main_df = pd.read_csv(in_file, sep=' ')
+Change: main_df = pd.read_csv(in_file, sep='\s+') Line 27
 
-# if (mode(yy).mode[0] != i_year): Line 101
-if (mode(yy).mode != i_year):
+to:     main_df = pd.read_csv(in_file, sep=' ')
 
-# temp_yr_mode.append(mode(yy).mode[0]) Line 105
-temp_yr_mode.append(mode(yy).mode)
+Change: if (mode(yy).mode[0] != i_year): Line 101
 
-# temp_mon_mode.append(mode(mm).mode[0]) Line 112
-temp_mon_mode.append(mode(mm).mode)
+to:     if (mode(yy).mode != i_year):
+
+Change: temp_yr_mode.append(mode(yy).mode[0]) Line 105
+
+to:     temp_yr_mode.append(mode(yy).mode)
+
+Change: temp_mon_mode.append(mode(mm).mode[0]) Line 112
+
+to:     temp_mon_mode.append(mode(mm).mode)
 
 # Run the script
 
