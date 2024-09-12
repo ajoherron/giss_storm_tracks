@@ -24,18 +24,12 @@ cp rhumb_line_nav_v4.cpython*.so rhumb_line_nav_v4.so
 
 # Update defines.py
 
-(Already taken care of for this repository)
-
 - source_code_folder should point to mcms_tracker
-  - ex: source_code_folder = '/home/jjonas/work_ana/STORM_TRACKS_NEW/giss_storm_tracks/mcms_tracker-4.1'
+  - ex: source_code_folder = '/discover/nobackup/aherron1/stormtracker/giss_storm_tracks/mcms_tracker-4.1/'
 - main_folder_location should point to giss_storm_tracks
-  - ex: main_folder_location = '/home/jjonas/work_ana/STORM_TRACKS_NEW/giss_storm_tracks/'
-- Add the following lines for sample input data:
-slp_data_directory = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0/sample_inputs/slp/'
-var_data_directory = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0/sample_inputs/slp/'
-topo_file = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0/sample_inputs/topo/GISS_MCMS_Topography.nc'
-model = 'E213F40oQ40'
-over_write_years = [7550, 7550]
+  - ex: main_folder_location = '/discover/nobackup/aherron1/stormtracker/giss_storm_tracks/'
+- Set the input data
+  - Currently set up to use sample inputs from Maxwell Elling's directory 
 
 # Update main_create_dict.py
 
