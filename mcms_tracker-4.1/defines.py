@@ -5,7 +5,8 @@ import os
 #########################################################################################
 
 # location of the source code that is required to run
-source_code_folder = '/localdrive/drive10/mcms_tracker/'
+#source_code_folder = '/localdrive/drive10/mcms_tracker/'
+source_code_folder = '/discover/nobackup/aherron1/stormtracker/giss_storm_tracks/mcms_tracker-4.1'
 
 # # location of the slp data to be copied into the data directory
 # SLP folder should cotain the data for slp in the format slp.2010.nc
@@ -82,11 +83,17 @@ source_code_folder = '/localdrive/drive10/mcms_tracker/'
 # model = 'testleo'
 # over_write_years = [2008, 2012]
 
-slp_data_directory = '/localdrive/drive6/tamu/converts/'
-var_data_directory = '/localdrive/drive6/tamu/converts/'
-topo_file = '/localdrive/drive6/tamu/converts/invariants.nc'
-model = 'testtamu'
-over_write_years = [1950, 2050]
+# slp_data_directory = '/localdrive/drive6/tamu/converts/'
+# var_data_directory = '/localdrive/drive6/tamu/converts/'
+# topo_file = '/localdrive/drive6/tamu/converts/invariants.nc'
+# model = 'testtamu'
+# over_write_years = [1950, 2050]
+
+slp_data_directory = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0/sample_inputs/slp/'
+var_data_directory = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0/sample_inputs/slp/'
+topo_file = '/discover/nobackup/melling/debug_stormtracks/mcms_tracker-4.0/sample_inputs/topo/GISS_MCMS_Topography.nc'
+model = 'E213F40oQ40'
+over_write_years = [7550, 7550]
 
 # slp_data_directory = '/localdrive/drive6/gfdl/converts/'
 # var_data_directory = '/localdrive/drive6/gfdl/converts/'
@@ -142,7 +149,8 @@ over_write_years = [1950, 2050]
 # location to which to save the outputs from the tracker
 # also this is the location from which the tracker will be run 
 # NOTE: the tracker does not run from the source code location
-main_folder_location = '/localdrive/drive10/mcms_tracker/RUNDIR/'
+# main_folder_location = '/localdrive/drive10/mcms_tracker/RUNDIR/'
+main_folder_location = '/discover/nobackup/aherron1/stormtracker/giss_storm_tracks/'
 
 # creating the links to other folder locations that are called by other python codes
 main_folder = os.path.join(main_folder_location, model) + '/'
