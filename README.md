@@ -53,4 +53,6 @@ to:     temp_mon_mode.append(mode(mm).mode)
 
 # Run the script
 
+(From mcms_tracker-4.1)
+
 python3 run_tracker.py
