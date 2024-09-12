@@ -128,15 +128,22 @@ for i_year in range(start_year, end_year+1):
     temp_fulllon.append(np.asarray(df.lon[usi_ind], dtype=float))
     temp_fulllat.append(np.asarray(df.lat[usi_ind], dtype=float))
     temp_fullslp.append(np.asarray(df.slp[usi_ind], dtype=float))
-    temp_flag.append(np.asarray(df.flags[usi_ind], dtype=int))
+    
+    # Updated from old scrip
+    # temp_flag.append(np.asarray(df.flags[usi_ind], dtype=int))
+    temp_flag.append(np.asarray(df['flags'].iloc[usi_ind], dtype=int))
 
     # print ('%d in %d'%(i_ind, uni_usi.shape[0]))
 
+  #####################################################
+  # Temporarily commenting out mat file functionality #
+  #####################################################
+
   # creating a record to save mat files, like the one jimmy creates using matlab
-  out_cyc = fromarrays([temp_uid, temp_uidsingle, temp_cid, temp_fulllon, temp_fulllat, temp_fullslp, temp_flag, temp_fulldate, temp_date1, temp_fullyr, temp_fullmon, temp_fullday, temp_fullhr, temp_mon_mode, temp_yr_mode], names=['UID', 'UIDsingle', 'CID', 'fulllon', 'fulllat', 'fullslp', 'flag', 'fulldate', 'date1', 'fullyr', 'fullmon', 'fullday', 'fullhr', 'mon_mode', 'yr_mode'])
+  # out_cyc = fromarrays([temp_uid, temp_uidsingle, temp_cid, temp_fulllon, temp_fulllat, temp_fullslp, temp_flag, temp_fulldate, temp_date1, temp_fullyr, temp_fullmon, temp_fullday, temp_fullhr, temp_mon_mode, temp_yr_mode], names=['UID', 'UIDsingle', 'CID', 'fulllon', 'fulllat', 'fullslp', 'flag', 'fulldate', 'date1', 'fullyr', 'fullmon', 'fullday', 'fullhr', 'mon_mode', 'yr_mode'])
 
   # saving mat files for each year
-  out_mat_file = os.path.join(defines.main_folder_location, '%s/read_%s/%s_%d.mat'%(in_model, in_model, in_model, i_year))
-  sio.savemat(out_mat_file, {'cyc':out_cyc})
+  # out_mat_file = os.path.join(defines.main_folder_location, '%s/read_%s/%s_%d.mat'%(in_model, in_model, in_model, i_year))
+  # sio.savemat(out_mat_file, {'cyc':out_cyc})
 
-  print(f'Created .mat file for {i_year}.')
+  # print(f'Created .mat file for {i_year}.')
