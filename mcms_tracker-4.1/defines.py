@@ -6,7 +6,7 @@ import os
 
 # location of the source code that is required to run
 #source_code_folder = '/localdrive/drive10/mcms_tracker/'
-source_code_folder = '/discover/nobackup/aherron1/stormtracker/giss_storm_tracks/mcms_tracker-4.1'
+source_code_folder = '/discover/nobackup/aherron1/stormtracker/giss_storm_tracks/mcms_tracker-4.1/'
 
 # # location of the slp data to be copied into the data directory
 # SLP folder should cotain the data for slp in the format slp.2010.nc
