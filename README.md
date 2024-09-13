@@ -1,14 +1,6 @@
 # Setup 
 
-cd mcms_tracker-4.1
-
-bash
-
-module load  anaconda/py3.9
-
-module load  python/GEOSpyD/Min24.4.0-0_py3.12
-
-cd tracker
+cd mcms_tracker-4.1/tracker
 
 python3 setup_g2l_v4.py build_ext --inplace
 
